@@ -1,0 +1,46 @@
+Requisitos Funcionais:
+	-Os produtos devem ser cadastrados no sistema, contendo informações como código de barra, fabricante, validade, preço, lote, principio ativo, quantidade disponível e categoria do medicamento.
+	-Gerente e funcionarios devem estar autenticados no sistema para fazer qualquer ação.
+	-Pode existir mais que um gerente que tem acesso ao sistema.
+	-Somente um atendente pode regitrar novos medicamentos/produtos.
+	-O sistema deve exibir ao atendente e ao gerente um resumo dos produtos disponíveis e quantidade de cada um.
+	-O sistema deve realizar um controle de estoque dos produtos.
+	-O sistema deve gerar categorias de medicamentos e também ter a opção de exibir medicamentos relacionados.
+	-O sistema deve gerar periodicamente relatórios dos produtos mais vendidos a pedido do gerente, com dados especificados pelo mesmo. Somente o gerente poderá ter acesso à esse documento. 
+	-Os clientes devem ser capazes de consultar um produto através do código de barra por meio dos terminais.
+	-Os funcionários devem ser capazes fazer o registro dos pedidos de clientes feitos no balcão.
+	-Ao realizar um pedido, o sistema deve gerar um arquivo resumindo os detalhes do pedido.
+	-O estoque deve ser imediatamente atualizado ao final de uma compra.
+	-O sistema deve exibir a data de vencimento dos produtos.
+	-O sistema deve fazer verificações diárias para encontrar e descartar lotes com produtos vencidos ou com qualquer tipo de problema.
+	-O sistema pode gerar descontos na compra de produtos em até 5% quando o usuário tiver seu cadastro no sistema e um devido cartão de autenticação.
+	-O cadastro de clientes só pode ser feito por funcionários e o cliente deve estar presencialmente na farmácia.
+	-Para realizar um cadastro, o cliente precisa fornecer: nome, telefone e CPF.
+	-Nenhum produto do sistema pode ser vendido gratuitamente.
+	
+Requisitos não funcionais:	
+	Desempenho:
+		-Os pedidos registrados no balcão devem ser enviados ao caixa através da rede.
+		-A conexão entre os terminais e o caixa nunca pode ser interrompida.
+		-A interface dos terminais deve ser a mais intuitiva possível de forma que uma pessoa sem experiência com computadores tenha pouca ou nenhuma dificuldade em utilizá-lo.
+		-Os cartões dos clientes (gerados no cadastro do mesmo no sistema) deve estar vinculado ao CPF da pessoa.
+		-O terminal disponível aos clientes deve ser capaz de exibir informações de qualquer produto da loja com um atraso máximo de 3 segundos.
+
+	Confiabilidade
+		-Não pode haver nenhum tipo de problema em consultas de produtos em terminais, registrar pedidos e pagamentos, ou em consultas de estoque.
+		-O sistema deve realizar cópias de segurança (backup) periodicamente.
+
+	Disponibilidade
+		-O sistema deve estar disponível para uso completo durante o horário de funcionamento da farmácia.	
+		-O sistema estará disponível em três tipos de terminais: terminal do balcão, do caixa, e o terminal de consulta dos clientes.
+
+	Segurança
+		-Nenhum agente externo pode ter acesso às informações de estoque e venda de produtos.
+		-Um usuário do sistema só pode ter acesso às informações e funcionalidades do seu tipo de usuário.
+
+	Manutenibilidade
+		-Manutenções devem ser realizadas periodicamente em horários que a farmácia não está em funcionamento.
+
+	Portabilidade
+		-O sistema somente deve funcionar nas plataformas da farmácia (Desktop utilizando Windows 10, especificamente o software da farmácia).
+		-Não serão aceitos dispositivos móveis no sistema.
