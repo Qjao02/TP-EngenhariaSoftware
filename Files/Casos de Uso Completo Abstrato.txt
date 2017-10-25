@@ -1,0 +1,104 @@
+Caso de uso: Realizar pedido
+Descrição: Registrar pedidos solicitados por clientes.
+Ator principal: Funcionário
+Interessados e interesses: 
+	Funcionário: Ele precisa registrar o pedido solicitado do cliente no sistema para que o mesmo possa realizar o pagamento.
+	Cliente: Seu pedido deve ser registrado para que ele possa obter seu medicamento.
+	
+Pré-condições: O funcionário deve estar cadastrado no sistema.
+Pós-condições: O pedido e suas respectivas informações devem estar salvas no sistema e o cliente deve ser capaz de realizar o pagamento do produto.
+Cenário de caso principal:
+	1. O sistema verifica se o funcionário iniciou uma sessão no sistema.
+	2. O cliente escolhe os produtos que deseja comprar e os entrega ao funcionário.
+	3. O funcionário inicia um novo pedido e registra nele os produtos escolhidos pelo cliente.
+	4. O sistema verifica se nenhum produto passou de seu prazo de validade.
+	5. O sistema finaliza a criação do pedido e o mesmo já pode ser quitado.
+	
+Fluxos alternativos:
+	1a. Se o funcionário não iniciou uma sessão no sistema:
+		1. O funcionário inicia uma sessão no sistema inserindo seus dados de login.
+
+	2a. Se pelo menos um dos produtos solicitados não estiver disponível no estoque:
+		1. O sistema solicitará um novo lote do produto aos farmaceuticos.
+		2. O incidente será alertado ao cliente e ele só poderá obter o medicamento quando um novo lote chegar à farmácia.
+	
+	3b. Se pelo menos um dos produtos solicitados não estiver registrado no sistema:
+		1ba. O funcionário pode podir ao gerente que solicite esse novo produtos aos farmaceuticos.
+		1bb. O funcionário somente alerta ao cliente que a farmácia não possui esse produto.
+		
+	4a. Se pelo menos um dos produtos está vencido:
+		1. O produto não será registrado no pedido e não poderá ser comprado pelo cliente.
+		2. O sistema solicitará a remoção do lote inteiro do produto.
+		3. O sistema solicitará um novo lote do produto aos farmaceuticos.
+		4. O incidente será alertado ao cliente e ele só poderá obter o medicamento quando um novo lote chegar à farmácia.
+
+
+
+		
+Caso de uso: Realizar pagamento
+Descrição: O sistema gera as formas de pagamento do pedido para que o funcionário solicite o pagamento ao cliente.
+Ator principal: Funcionário
+Interessados e interesses:
+	Funcionário: Ele precisa solicitar o pagamento ao cliente.
+	Cliente: Ele precisa de escolher uma forma de pagamento do seu pedido.
+	
+Pré-condições: O pedido do cliente deve estar registrado no sistema.
+Pós-condições: O pagamento foi realizado com sucesso.
+Cenário de caso principal:
+	1. O funcionário alerta ao cliente as formas de pagamento aceitas pelo sistema e pede para que ele escolha uma delas.
+	2. O cliente faz a escolha de uma das formas de pagamento.
+	3. O cliente insere os dados necessários para a concretização da compra dos produtos.
+	4. Os dados são conferidos pelo sistema.
+	5. O sistema confere se o cliente já está cadastrado na loja.
+	6. O pagamento é efetivado pelo sistema.
+	5. A compra está no estágio final. O pagamento foi realizado com sucesso. Basta confirmar o pagamento do pedido.
+	
+Fluxos alternativos:
+	2a. Se o cliente solicitar uma forma de pagamento não suportada pelo sistema:
+		1. O funcionário alerta que esta forma de pagamento não é aceita pelo sistema.
+		2. Voltar ao passo 1.
+	
+	3a. Se o sistema detectar algum dado inválido inserirido pelo cliente para realizar o pagamento:
+		1. O sistema irá listar quais são os dados inválidos.
+		2. O funcionário solicita ao cliente que confira a validade de suas informações e insira os dados solicitados a serem corrigidos pelo sistema.
+		
+	5a. Se o cliente já possuir cadastro no sistema:
+		1. O funcionário alerta ao cliente que ele tem direito à um desconto de 5% no valor do pagamento.
+		2. O desconto será aplicado ao valor total do pagamento.
+	
+	5b. Se o cliente não possuir cadastro no sistema:
+		1. O funcionário alerta ao usuário que ele tem direito ao disconto de 5% se ele estiver cadastrado no sistema.
+		5ba. Se o cliente aceitar fazer o cadastro:
+			1. O funcionário irá cadastrar o cliente no sistema.
+		5bb. Se o cliente não aceitar fazer o cadastro:
+			1. O desconto não será aplicado no pagamento.
+
+
+
+			
+Caso de uso: Cadastrar cliente
+Descrição: O funcionário cadastra o cliente no sistema.
+Ator principal: Funcionário
+Interessados e interesses:
+	Funcionário: Cadastrar o cliente no sistema.
+	Cliente: Estar cadastrado no sistema, seja pelo desconto em compras ou não.
+	
+Pré-condições: O funcionário deve estar cadastrado no sistema.
+Pós-condições: O cliente deve estar cadastrado no sistema.
+Cenário de caso principal:
+	1. O sistema verifica se o funcionário iniciou uma sessão no sistema.
+	2. O funcionário solicita ao cliente os dados necessários para fazer o cadastro.
+	3. O cliente insere os dados solicitados pelo funcionário.
+	4. O sistema verifica se os dados inseridos são válidos.
+	5. O usuário é efetivamente cadastrado no sistema.
+	
+Fluxos alternativos:
+	1a. Se o funcionário não iniciou uma sessão no sistema:
+		1. O funcionário inicia uma sessão no sistema inserindo seus dados de login.
+		
+	3a. Se existirem dados necessários que não foram inseridos:
+		1. O funcionário solicita os dados restantes ao cliente.
+	
+	4a. Se o sistema encontrar algo dado inválido inserido pelo usuário:
+		1. O sistema irá listar quais são os dados inválidos.
+		2. O funcionário solicita ao cliente que confira a validade de suas informações e insira os dados solicitados a serem corrigidos pelo sistema.
