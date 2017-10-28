@@ -1,0 +1,17 @@
+Ciclo de Iteracao 1:
+Cadastrar Cliente, Cadastrar Produto, Gerar Cartão, Autenticar no sistema.
+
+O foco é conseguir implementar uma base de dados para clientes, funcionários e produtos para depois conseguir realizar as futuras
+funcionalidades que dependem desses requisitos de caráter básico.
+
+Ciclo de Iteracao 2:
+Realizar Pedido, Realizar Pagamento, Confirmar Pagamento, Gerar Desconto.
+
+Como já é possível acessar e criar dados relacionados a clintes e produtos, o foco dessa iteração é implementar as funcionalidades relacionadas
+ao pagamento de produtos por parte do cliente.
+
+Ciclo de Iteracao 3:
+Consultar Preço, Acessar relatório produtos mais vendidos, Gerar relatório produtos mais vendidos.
+
+Agora que o pagamento também está concluído, basta implementar as funcionalidades restantes ao sistema. Essa categoria está relacionada
+à consultas simples no banco de dados, porém, essa é simplesmente a parte restante à ser implementada.
