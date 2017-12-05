@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "1068370368300",
+    "firebase_url": "https://controlfarma-c3509.firebaseio.com",
+    "project_id": "controlfarma-c3509",
+    "storage_bucket": "controlfarma-c3509.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068370368300:android:c22f8f191352126f",
+        "android_client_info": {
+          "package_name": "com.ufsj.ies.controlfarma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068370368300-o37raluddv7jist3jfpp4csfnhel10pf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ufsj.ies.controlfarma",
+            "certificate_hash": "1611b899e7d4a8ebab9700c1fda9137cf759631b"
+          }
+        },
+        {
+          "client_id": "1068370368300-su9saehf9bi3jpjitgaemvtlet3vkof7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuirq0hAh4NirDHQnNfTFUjqOq3iYSdzE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068370368300-su9saehf9bi3jpjitgaemvtlet3vkof7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1068370368300-tprnrvtgs8g92usqunqb53hos8h31bfa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ufsj.ies.controlfarma"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

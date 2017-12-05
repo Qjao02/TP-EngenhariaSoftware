@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dimensaoTitulos">20sp</dimen>
+    <dimen name="dimensionTitle">20sp</dimen>
+    <dimen name="texto_entrada">20sp</dimen>
+    <dimen name="altura_spinner">30sp</dimen>
+    <dimen name="largura_spinner">300sp</dimen>
+</resources>
