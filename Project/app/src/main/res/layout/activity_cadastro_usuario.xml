@@ -8,14 +8,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".activity.CadastroUsuarioActivity"
-    android:background="@color/colorYellow">
+    android:background="@color/colorGreen">
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="30dp"
         android:id="@+id/nomeCadastroEditText"
         android:layout_marginTop="45dp"
-        android:background="@color/colorYellowDarker"
+        android:background="@color/colorGreenDarker"
         android:hint="Digite seu nome:"
         android:layout_below="@+id/textView"
         android:layout_alignLeft="@+id/textView"
@@ -27,7 +27,7 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/emailCadastroEditText"
-        android:background="@color/colorYellowDarker"
+        android:background="@color/colorGreenDarker"
         android:hint="Digite seu email:"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/cadastroSpinner"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:text="Cadastrar"
         android:id="@+id/buttonCadastrar"
-        android:background="@color/colorYellowDarker"
+        android:background="@color/colorGreenDarker"
         android:layout_marginTop="21dp"
         android:layout_below="@+id/reSenhaCadastroEditText"
         android:layout_alignParentLeft="true"
@@ -72,7 +72,7 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/senhaCadastroEditText"
-        android:background="@color/colorYellowDarker"
+        android:background="@color/colorGreenDarker"
         android:hint="Digite sua senha:"
         android:layout_below="@+id/emailCadastroEditText"
         android:layout_alignLeft="@+id/emailCadastroEditText"
@@ -88,7 +88,7 @@
         android:ems="10"
         android:id="@+id/reSenhaCadastroEditText"
         android:hint="Redigite sua senha:"
-        android:background="@color/colorYellowDarker"
+        android:background="@color/colorGreenDarker"
         android:layout_below="@+id/senhaCadastroEditText"
         android:layout_alignLeft="@+id/senhaCadastroEditText"
         android:layout_alignStart="@+id/senhaCadastroEditText"
@@ -106,7 +106,7 @@
         android:layout_alignLeft="@+id/nomeCadastroEditText"
         android:layout_alignStart="@+id/nomeCadastroEditText"
         android:layout_marginTop="26dp"
-        android:background="@color/colorYellowDarker"
+        android:background="@color/colorGreenDarker"
         android:hint="Digite seu sobrenome:"
         android:layout_alignRight="@+id/nomeCadastroEditText"
         android:layout_alignEnd="@+id/nomeCadastroEditText" />
@@ -119,6 +119,6 @@
         android:layout_alignStart="@+id/sobrenomeCadastroEditText"
         android:layout_alignRight="@+id/sobrenomeCadastroEditText"
         android:layout_alignEnd="@+id/sobrenomeCadastroEditText"
-        android:background="@color/colorYellowDarker" />
+        android:background="@color/colorGreenDarker" />
 
 </RelativeLayout>
