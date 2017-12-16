@@ -11,51 +11,38 @@
     android:background="@color/colorGreen">
 
     <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="30dp"
         android:id="@+id/nomeCadastroEditText"
-        android:layout_marginTop="45dp"
-        android:background="@color/colorGreenDarker"
-        android:hint="Digite seu nome:"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
-    <EditText
         android:layout_width="fill_parent"
         android:layout_height="30dp"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/emailCadastroEditText"
-        android:background="@color/colorGreenDarker"
-        android:hint="Digite seu email:"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/cadastroSpinner"
-        android:layout_alignStart="@+id/cadastroSpinner" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar"
-        android:id="@+id/buttonCadastrar"
-        android:background="@color/colorGreenDarker"
-        android:layout_marginTop="21dp"
-        android:layout_below="@+id/reSenhaCadastroEditText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Criar uma conta"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginStart="69dp"
-        android:textSize="30dp" />
+        android:layout_below="@+id/setaCadastroImageView"
+        android:layout_marginTop="57dp"
+        android:background="@color/colorGreenDarker"
+        android:hint="Digite seu nome:" />
+
+    <EditText
+        android:id="@+id/emailCadastroEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sobrenomeCadastroEditText"
+        android:layout_marginTop="97dp"
+        android:background="@color/colorGreenDarker"
+        android:ems="10"
+        android:hint="Digite seu email:"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorGreenDarker"
+        android:text="Cadastrar" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -97,28 +84,35 @@
         android:layout_alignEnd="@+id/senhaCadastroEditText" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:id="@+id/sobrenomeCadastroEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/nomeCadastroEditText"
-        android:layout_alignLeft="@+id/nomeCadastroEditText"
-        android:layout_alignStart="@+id/nomeCadastroEditText"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="50dp"
         android:background="@color/colorGreenDarker"
+        android:ems="10"
         android:hint="Digite seu sobrenome:"
-        android:layout_alignRight="@+id/nomeCadastroEditText"
-        android:layout_alignEnd="@+id/nomeCadastroEditText" />
+        android:inputType="textPersonName" />
 
     <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
         android:id="@+id/cadastroSpinner"
-        android:layout_alignLeft="@+id/sobrenomeCadastroEditText"
-        android:layout_alignStart="@+id/sobrenomeCadastroEditText"
-        android:layout_alignRight="@+id/sobrenomeCadastroEditText"
-        android:layout_alignEnd="@+id/sobrenomeCadastroEditText"
-        android:background="@color/colorGreenDarker" />
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/altura_spinner"
+        android:layout_below="@+id/sobrenomeCadastroEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorGreenDarker"
+        android:backgroundTint="@color/colorGreenDarker" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nomeCadastroEditText"
+        android:layout_centerHorizontal="true"
+        android:text="Criar nova conta"
+        android:textSize="30dp" />
 
 </RelativeLayout>
