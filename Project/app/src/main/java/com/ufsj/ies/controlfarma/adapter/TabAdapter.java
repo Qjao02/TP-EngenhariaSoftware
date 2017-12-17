@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.ufsj.ies.controlfarma.fragment.CadastroClienteFragment;
 import com.ufsj.ies.controlfarma.fragment.CadastroProdutoFragment;
 import com.ufsj.ies.controlfarma.fragment.ClientesFragment;
+import com.ufsj.ies.controlfarma.fragment.PagamentoFragment;
+import com.ufsj.ies.controlfarma.fragment.PedidoFragment;
 import com.ufsj.ies.controlfarma.fragment.ProdutosFragment;
 
 /**
@@ -15,7 +17,7 @@ import com.ufsj.ies.controlfarma.fragment.ProdutosFragment;
 
 public class TabAdapter extends FragmentStatePagerAdapter {
 
-    String[] tituloAbas = {"Cadastrar Cliente", "Clientes","Cadastrar Produto","Produtos"};
+    String[] tituloAbas = {"Cadastrar Cliente", "Cadastrar Medicamento","Realizar Pedido","Confirmar Pagamento"};
 
     public TabAdapter(FragmentManager fm) {
         super(fm);
@@ -33,10 +35,10 @@ public class TabAdapter extends FragmentStatePagerAdapter {
                 fragment = new ClientesFragment();
                 break;
             case 2:
-                fragment = new CadastroProdutoFragment();
+                fragment = new PedidoFragment();
                 break;
             case 3:
-                fragment = new ProdutosFragment();
+                fragment = new PagamentoFragment();
                 break;
         }
 

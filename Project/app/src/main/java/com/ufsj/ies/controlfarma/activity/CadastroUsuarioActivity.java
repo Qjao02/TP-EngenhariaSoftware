@@ -26,7 +26,7 @@ import com.ufsj.ies.controlfarma.R;
 import com.ufsj.ies.controlfarma.config.ConfiguracaoFirebase;
 import com.ufsj.ies.controlfarma.helper.Base64Custom;
 import com.ufsj.ies.controlfarma.helper.Preferencias;
-import com.ufsj.ies.controlfarma.model.Usuario;
+import com.ufsj.ies.controlfarma.model.Funcionario;
 
 public class CadastroUsuarioActivity extends AppCompatActivity {
     private EditText nome;
@@ -35,7 +35,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
     private EditText sobrenome;
     private EditText senha2;
     private Button botao;
-    private Usuario usuario;
+    private Funcionario funcionario;
     private ImageView voltar;
     private DatabaseReference databaseReference;
     private FirebaseAuth firebaseAuth;
@@ -78,18 +78,18 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             }
         });
 
-        usuario = new Usuario();
+        funcionario = new Funcionario();
         botao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!nome.getText().toString().isEmpty() && !email.getText().toString().isEmpty() && !senha.getText().toString().isEmpty()
                         && !senha2.getText().toString().isEmpty() && !sobrenome.getText().toString().isEmpty() && spinner.getSelectedItemPosition() != 0){
                     if(senha.getText().toString().equals(senha2.getText().toString())){
-                        usuario.setNome(nome.getText().toString());
-                        usuario.setEmail(email.getText().toString());
-                        usuario.setSenha(senha.getText().toString());
-                        usuario.setSexo(spinner.getSelectedItem().toString());
-                        usuario.setSobrenome(sobrenome.getText().toString());
+                        funcionario.setNome(nome.getText().toString());
+                        funcionario.setEmail(email.getText().toString());
+                        funcionario.setSenha(senha.getText().toString());
+                        funcionario.setSexo(spinner.getSelectedItem().toString());
+                        funcionario.setSobrenome(sobrenome.getText().toString());
                         if(!cadastrou) {
                             cadastrarUsuario();
                         }
@@ -115,14 +115,14 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
     }
     private void cadastrarUsuario(){
         firebaseAuth = ConfiguracaoFirebase.getFirebaseAutenticacao();
-        firebaseAuth.createUserWithEmailAndPassword(usuario.getEmail(),usuario.getSenha()).addOnCompleteListener(CadastroUsuarioActivity.this, new OnCompleteListener<AuthResult>() {
+        firebaseAuth.createUserWithEmailAndPassword(funcionario.getEmail(), funcionario.getSenha()).addOnCompleteListener(CadastroUsuarioActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     FirebaseUser usuarioFirebase = task.getResult().getUser();
-                    String idUsuario = Base64Custom.codificarBase64(usuario.getEmail());
-                    usuario.setId(idUsuario);
-                    usuario.salvarDados();
+                    String idUsuario = Base64Custom.codificarBase64(funcionario.getEmail());
+                    funcionario.setId(idUsuario);
+                    funcionario.salvarDados();
 
                     Preferencias preferencias = new Preferencias(CadastroUsuarioActivity.this);
                     preferencias.salvarDados(idUsuario);

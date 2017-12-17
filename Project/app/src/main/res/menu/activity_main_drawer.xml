@@ -7,4 +7,14 @@
         android:title="Sair"
         android:orderInCategory="500"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/item_registros"
+        android:title="Lista de Registros"
+        android:orderInCategory="300"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_clientes"
+        android:title="Lista de Clientes"
+        android:orderInCategory="400"
+        app:showAsAction="never" />
 </menu>

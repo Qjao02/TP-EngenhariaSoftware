@@ -7,7 +7,7 @@ import com.ufsj.ies.controlfarma.config.ConfiguracaoFirebase;
 /**
  * Created by JV on 18/09/2017.
  */
-public class Usuario {
+public class Funcionario {
     private String id;
     private String email;
     private String nome;
@@ -69,6 +69,6 @@ public class Usuario {
 
     public void salvarDados(){
         databaseReference = ConfiguracaoFirebase.getFirebase();
-        databaseReference.child("usuarios").child(getId()).setValue(this);
+        databaseReference.child("funcionarios").child(getId()).setValue(this);
     }
 }

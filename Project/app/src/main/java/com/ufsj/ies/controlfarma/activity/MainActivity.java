@@ -78,7 +78,12 @@ public class MainActivity extends AppCompatActivity{
         switch (item.getItemId()){
             case R.id.item_logout:
                 logoutUsuario();
-
+                return true;
+            case R.id.item_registros:
+                startActivity(new Intent(MainActivity.this,RegistrosActivity.class));
+                return true;
+            case R.id.item_clientes:
+                startActivity(new Intent(MainActivity.this,ListaClientesActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

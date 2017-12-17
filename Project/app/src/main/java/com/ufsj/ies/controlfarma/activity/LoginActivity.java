@@ -22,7 +22,7 @@ import com.ufsj.ies.controlfarma.config.ConfiguracaoFirebase;
 import com.ufsj.ies.controlfarma.helper.Base64Custom;
 import com.ufsj.ies.controlfarma.helper.Permissao;
 import com.ufsj.ies.controlfarma.helper.Preferencias;
-import com.ufsj.ies.controlfarma.model.Usuario;
+import com.ufsj.ies.controlfarma.model.Funcionario;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button botao;
     private DatabaseReference databaseReference;
     private FirebaseAuth firebaseAuth;
-    private Usuario usuario;
+    private Funcionario funcionario;
     private String[] permissoesNecessarias = new String[]{
             android.Manifest.permission.INTERNET, Manifest.permission.ACCESS_FINE_LOCATION
     };
@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         verificarUsuarioLogado();
         Permissao.validarPermissoes(1,this,permissoesNecessarias);
-        usuario = new Usuario();
+        funcionario = new Funcionario();
         email = (EditText) findViewById(R.id.emailLoginEditText);
         senha = (EditText) findViewById(R.id.senhaLoginEditText);
         cadastro = (Button) findViewById(R.id.loginCadastroButton);
@@ -51,8 +51,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(!email.getText().toString().isEmpty() && !senha.getText().toString().isEmpty()){
-                    usuario.setEmail(email.getText().toString());
-                    usuario.setSenha(senha.getText().toString());
+                    funcionario.setEmail(email.getText().toString());
+                    funcionario.setSenha(senha.getText().toString());
                     try{
                         validarUsuario();
                     }catch (Exception e){
@@ -86,12 +86,12 @@ public class LoginActivity extends AppCompatActivity {
 
     public void validarUsuario(){
         databaseReference = ConfiguracaoFirebase.getFirebase();
-        firebaseAuth.signInWithEmailAndPassword(usuario.getEmail().toString(),usuario.getSenha().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        firebaseAuth.signInWithEmailAndPassword(funcionario.getEmail().toString(), funcionario.getSenha().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Preferencias preferencias = new Preferencias(LoginActivity.this);
-                    String idUsuario = Base64Custom.codificarBase64(usuario.getEmail());
+                    String idUsuario = Base64Custom.codificarBase64(funcionario.getEmail());
                     preferencias.salvarDados(idUsuario);
                     abrirMenuPrincipal();
                 }else{
