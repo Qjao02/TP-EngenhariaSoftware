@@ -9,7 +9,7 @@ import java.util.Date;
 public class Registro{
     private Medicamento medicamento;
     private int numeroEstante;
-    private int numeroRegistro;
+    private String numeroRegistro;
     private int quantidade;
     private Date validade;
     private int codigoDeBarra;
@@ -32,11 +32,11 @@ public class Registro{
         this.numeroEstante = numeroEstante;
     }
 
-    public int getNumeroRegistro() {
+    public String getNumeroRegistro() {
         return numeroRegistro;
     }
 
-    public void setNumeroRegistro(int numeroRegistro) {
+    public void setNumeroRegistro(String numeroRegistro) {
         this.numeroRegistro = numeroRegistro;
     }
 

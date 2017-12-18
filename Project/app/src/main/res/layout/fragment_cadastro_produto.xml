@@ -15,4 +15,46 @@
         android:textColor="@color/colorGreenDarker"
         android:textSize="30dp" />
 
+    <EditText
+        android:id="@+id/nomeMedicamentoEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView23"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Nome do Produto:"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/prinAtivoEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nomeMedicamentoEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:ems="10"
+        android:hint="Princípio Ativo:"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/specEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prinAtivoEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:ems="10"
+        android:hint="Especificações de Armazenamento:"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/medicamentoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/specEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:text="Cadastrar Medicamento" />
+
 </RelativeLayout>

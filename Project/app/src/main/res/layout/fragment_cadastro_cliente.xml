@@ -14,4 +14,49 @@
         android:text="Dados do Cliente"
         android:textColor="@color/colorGreenDarker"
         android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/emailUsuarioEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cpfUsuarioEditText"
+        android:layout_marginTop="77dp"
+        android:ems="10"
+        android:hint="Email:"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/nomeUsuarioEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Nome:"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/usuarioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailUsuarioEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:text="Cadastrar Cliente" />
+
+    <EditText
+        android:id="@+id/cpfUsuarioEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nomeUsuarioEditText"
+        android:layout_marginTop="71dp"
+        android:ems="10"
+        android:hint="CPF:"
+        android:inputType="number" />
 </RelativeLayout>

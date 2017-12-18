@@ -10,6 +10,7 @@ import com.ufsj.ies.controlfarma.fragment.ClientesFragment;
 import com.ufsj.ies.controlfarma.fragment.PagamentoFragment;
 import com.ufsj.ies.controlfarma.fragment.PedidoFragment;
 import com.ufsj.ies.controlfarma.fragment.ProdutosFragment;
+import com.ufsj.ies.controlfarma.fragment.RegistroFragment;
 
 /**
  * Created by JV on 06/11/17.
@@ -17,7 +18,7 @@ import com.ufsj.ies.controlfarma.fragment.ProdutosFragment;
 
 public class TabAdapter extends FragmentStatePagerAdapter {
 
-    String[] tituloAbas = {"Cadastrar Cliente", "Cadastrar Medicamento","Realizar Pedido","Confirmar Pagamento"};
+    String[] tituloAbas = {"Cadastrar Cliente", "Cadastrar Medicamento","Estoque","Realizar Pedido","Confirmar Pagamento"};
 
     public TabAdapter(FragmentManager fm) {
         super(fm);
@@ -32,12 +33,15 @@ public class TabAdapter extends FragmentStatePagerAdapter {
                 fragment = new CadastroClienteFragment();
                 break;
             case 1:
-                fragment = new ClientesFragment();
+                fragment = new CadastroProdutoFragment();
                 break;
             case 2:
-                fragment = new PedidoFragment();
+                fragment = new RegistroFragment();
                 break;
             case 3:
+                fragment = new PedidoFragment();
+                break;
+            case 4:
                 fragment = new PagamentoFragment();
                 break;
         }

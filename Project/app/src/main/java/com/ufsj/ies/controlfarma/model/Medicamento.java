@@ -8,6 +8,15 @@ public class Medicamento{
     private String nome;
     private String principioAtivo;
     private String especificacoesArmazenamento;
+    private int numPedidos;
+
+    public int getNumPedidos() {
+        return numPedidos;
+    }
+
+    public void setNumPedidos(int numPedidos) {
+        this.numPedidos = numPedidos;
+    }
 
     public String getNome() {
         return nome;

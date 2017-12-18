@@ -1,0 +1,109 @@
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.ufsj.ies.controlfarma.fragment.RegistroFragment">
+
+        <Spinner
+            android:id="@+id/medicamentosRegistroSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="80dp" />
+
+        <EditText
+            android:id="@+id/numEstanteEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/medicamentosRegistroSpinner"
+            android:layout_marginTop="37dp"
+            android:ems="10"
+            android:hint="Numero da Estante:"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/quantidadeMedicamentoEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/numEstanteEditText"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="Quantidade:"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/validadeMedicamentoEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quantidadeMedicamentoEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:ems="10"
+            android:hint="Data de Validade:"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/codBarraMedicamentoEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/validadeMedicamentoEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:hint="Código de Barra:"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/fabricanteMedicamentoEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/codBarraMedicamentoEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            android:ems="10"
+            android:hint="Fabricante:"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/fornecedorEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fabricanteMedicamentoEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Fornecedor:"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/registroButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fornecedorEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Button" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="Adicionar Registro"
+            android:textColor="@color/colorGreenDarker"
+            android:textSize="26sp" />
+
+    </RelativeLayout>
+
+</ScrollView>
